@@ -1,3 +1,4 @@
+import slugify from '@sindresorhus/slugify';
 import { wikiLinkToLink } from 'mdast-util-wiki-link-to-link';
 import remarkWikiLink from 'remark-wiki-link';
 export const remarkObsidianLink = function (opts) {
@@ -7,11 +8,16 @@ export const remarkObsidianLink = function (opts) {
         return wikiLinkToLink(tree, { toUri });
     };
 };
+const toSlug = (s) => slugify(s, { decamelize: false });
 function _toUri(s) {
     if (/^#/g.test(s)) {
-        return s;
+        return `#${toSlug(s)}`;
+    }
+    else if (/#/g.test(s)) {
+        const [a, b] = s.split('#');
+        return `/content/${toSlug(a)}#${toSlug(b)}`;
     }
     else {
-        return `/${s}`;
+        return `/content/${toSlug(s)}`;
     }
 }
