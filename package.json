@@ -20,15 +20,14 @@
   },
   "dependencies": {
     "@sindresorhus/slugify": "^2.1.1",
-    "mdast-util-wiki-link-to-link": "^0.0.2",
-    "remark-wiki-link": "^1.0.4"
+    "mdast-builder": "^1.1.1",
+    "remark-wiki-link": "^1.0.4",
+    "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
-    "@types/mdast": "^3.0.10",
     "prettier": "^2.7.1",
     "remark": "^14.0.2",
     "skooh": "^0.2.1",
-    "typescript": "^4.8.4",
-    "unified": "^10.1.2"
+    "typescript": "^4.8.4"
   }
 }

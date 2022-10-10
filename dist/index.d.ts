@@ -1,6 +1,13 @@
-import { Root as MdastRoot } from 'mdast';
-import { Plugin } from 'unified';
-export declare const remarkObsidianLink: Plugin<[
-] | [{
-    toUri?: (s: string) => string;
-}], MdastRoot>;
+export interface WikiLink {
+    value: string;
+    alias?: string;
+}
+export interface Link {
+    value: string;
+    uri: string;
+    title?: string;
+}
+export declare type ToLink = (wikiLink: WikiLink) => Link | string;
+export declare const remarkObsidianLink: (opts?: {
+    toLink?: ToLink;
+}) => (tree: any) => void;
