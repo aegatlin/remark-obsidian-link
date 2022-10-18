@@ -8,7 +8,7 @@ const toLink = (wikiLink) => ({
   uri: `/${wikiLink.value}`,
 })
 
-unified().use(remarkObsidianLink, { toLink })
+unified().use(remarkParse).use(remarkObsidianLink, { toLink })
 ```
 
 ## toLink option
