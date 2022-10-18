@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "description": "",
   "main": "dist/index.js",
+  "repository": "aegatlin/remark-obsidian-link",
   "scripts": {
     "test": "node --test",
     "format": "prettier --write lib test.js README.md",
