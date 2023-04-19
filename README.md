@@ -6,9 +6,9 @@ This lib turns Obsidian-style wiki-links to mdast-links. It uses [remark-wiki-li
 const toLink = (wikiLink) => ({
   value: wikiLink.value,
   uri: `/${wikiLink.value}`,
-})
+});
 
-unified().use(remarkParse).use(remarkObsidianLink, { toLink })
+unified().use(remarkParse).use(remarkObsidianLink, { toLink });
 ```
 
 ## toLink option

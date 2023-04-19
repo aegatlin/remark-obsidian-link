@@ -1,13 +1,15 @@
-export interface WikiLink {
+interface WikiLink {
     value: string;
     alias?: string;
 }
-export interface Link {
+interface Link {
     value: string;
     uri: string;
     title?: string;
 }
-export declare type ToLink = (wikiLink: WikiLink) => Link | string;
-export declare const remarkObsidianLink: (opts?: {
+declare type ToLink = (wikiLink: WikiLink) => Link | string;
+declare const remarkObsidianLink: (opts?: {
     toLink?: ToLink;
 }) => (tree: any) => void;
+
+export { Link, ToLink, WikiLink, remarkObsidianLink };

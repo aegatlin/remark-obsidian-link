@@ -3,21 +3,26 @@
   "version": "0.2.2",
   "description": "",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "aegatlin/remark-obsidian-link",
   "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup lib/index.ts --dts --format esm,cjs",
     "test": "node --test",
     "format": "prettier --write lib test.js README.md",
     "prepare": "skooh",
-    "ppp": "npm version patch && git push && npm publish",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "ppp": "npm version patch && git push && npm publish"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "hooks": {
-    "pre-commit": "npm run format"
+    "pre-commit": "npm run format",
+    "pre-push": "npm run test"
   },
   "dependencies": {
     "mdast-builder": "^1.1.1",
@@ -28,6 +33,7 @@
     "prettier": "^2.7.1",
     "remark": "^14.0.2",
     "skooh": "^0.2.1",
+    "tsup": "^6.7.0",
     "typescript": "^4.8.4"
   }
 }
