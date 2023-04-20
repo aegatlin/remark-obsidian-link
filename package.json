@@ -1,25 +1,30 @@
 {
   "name": "remark-obsidian-link",
   "version": "0.2.2",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": "aegatlin/remark-obsidian-link",
-  "scripts": {
-    "dev": "npm run build -- --watch",
-    "build": "tsup lib/index.ts --dts --format esm,cjs",
-    "test": "node --test",
-    "format": "prettier --write lib test.js README.md",
-    "prepare": "skooh",
-    "ppp": "npm version patch && git push && npm publish"
+  "description": "turn obsidian links into markdown links",
+  "author": "Austin Gatlin",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.js"
   },
   "files": [
     "dist"
   ],
+  "repository": "aegatlin/remark-obsidian-link",
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "module",
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "test": "node --test",
+    "format": "prettier --write src test.js README.md",
+    "prepare": "skooh",
+    "ppp": "npm version patch && git push && npm publish"
+  },
   "hooks": {
     "pre-commit": "npm run format",
     "pre-push": "npm run test"

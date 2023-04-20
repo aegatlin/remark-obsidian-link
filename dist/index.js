@@ -1,4 +1,4 @@
-// lib/index.ts
+// src/index.ts
 import m from "mdast-builder";
 import remarkWikiLink from "remark-wiki-link";
 import { SKIP, visit } from "unist-util-visit";

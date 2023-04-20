@@ -4,5 +4,4 @@
     "module": "node16",
     "declaration": true
   },
-  "include": ["lib/**/*"]
 }

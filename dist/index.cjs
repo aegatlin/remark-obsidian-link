@@ -26,12 +26,12 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// lib/index.ts
-var lib_exports = {};
-__export(lib_exports, {
+// src/index.ts
+var src_exports = {};
+__export(src_exports, {
   remarkObsidianLink: () => remarkObsidianLink
 });
-module.exports = __toCommonJS(lib_exports);
+module.exports = __toCommonJS(src_exports);
 var import_mdast_builder = __toESM(require("mdast-builder"), 1);
 var import_remark_wiki_link = __toESM(require("remark-wiki-link"), 1);
 var import_unist_util_visit = require("unist-util-visit");
