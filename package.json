@@ -1,6 +1,6 @@
 {
   "name": "remark-obsidian-link",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "turn obsidian links into markdown links",
   "author": "Austin Gatlin",
   "type": "module",
