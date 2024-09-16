@@ -7,7 +7,7 @@ export interface Link {
     uri: string;
     title?: string;
 }
-export declare type ToLink = (wikiLink: WikiLink) => Link | string;
+export type ToLink = (wikiLink: WikiLink) => Link | string;
 export declare const remarkObsidianLink: (opts?: {
     toLink?: ToLink;
 }) => (tree: any) => void;
