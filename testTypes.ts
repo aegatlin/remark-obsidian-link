@@ -17,6 +17,7 @@ remark().use(remarkObsidianLink, {
 })
 
 // Bad
+//// when you uncomment these, they should show compiler warnings
 // remark().use(remarkObsidianLink, { toLink: () => 4 })
 // remark().use(remarkObsidianLink, { toLinks: () => 's' })
 // remark().use(remarkObsidianLink, { idk: 4 })
