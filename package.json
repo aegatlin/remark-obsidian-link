@@ -3,7 +3,10 @@
   "version": "0.2.3",
   "description": "",
   "main": "dist/index.js",
-  "repository": "aegatlin/remark-obsidian-link",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aegatlin/remark-obsidian-link.git"
+  },
   "scripts": {
     "test": "node --test",
     "format": "prettier --write lib test.js README.md",
