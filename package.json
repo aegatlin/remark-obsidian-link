@@ -21,13 +21,13 @@
   },
   "dependencies": {
     "mdast-builder": "^1.1.1",
-    "remark-wiki-link": "^1.0.4",
-    "unist-util-visit": "^4.1.1"
+    "remark-wiki-link": "^2.0.1",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "prettier": "^2.7.1",
-    "remark": "^14.0.2",
-    "skooh": "^0.2.1",
-    "typescript": "^4.8.4"
+    "prettier": "^3.3.3",
+    "remark": "^15.0.1",
+    "skooh": "^0.3.2",
+    "typescript": "^5.6.2"
   }
 }
